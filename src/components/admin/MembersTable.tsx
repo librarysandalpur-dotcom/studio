@@ -25,7 +25,8 @@ const members = [
     id: "m_001",
     name: "Aarav Sharma",
     email: "aarav.sharma@example.com",
-    avatar: "https://i.pravatar.cc/150?u=aarav",
+    avatar: "https://picsum.photos/seed/aarav/150/150",
+    hint: "man portrait",
     status: "Active",
     plan: "Annually",
     joinDate: "2023-01-15",
@@ -34,7 +35,8 @@ const members = [
     id: "m_002",
     name: "Diya Patel",
     email: "diya.patel@example.com",
-    avatar: "https://i.pravatar.cc/150?u=diya",
+    avatar: "https://picsum.photos/seed/diya/150/150",
+    hint: "woman portrait",
     status: "Active",
     plan: "Monthly",
     joinDate: "2024-05-10",
@@ -43,7 +45,8 @@ const members = [
     id: "m_003",
     name: "Rohan Gupta",
     email: "rohan.gupta@example.com",
-    avatar: "https://i.pravatar.cc/150?u=rohan",
+    avatar: "https://picsum.photos/seed/rohan/150/150",
+    hint: "man portrait",
     status: "Expired",
     plan: "Monthly",
     joinDate: "2024-03-01",
@@ -52,7 +55,8 @@ const members = [
     id: "m_004",
     name: "Priya Singh",
     email: "priya.singh@example.com",
-    avatar: "https://i.pravatar.cc/150?u=priya",
+    avatar: "https://picsum.photos/seed/priya/150/150",
+    hint: "woman portrait",
     status: "Active",
     plan: "Quarterly",
     joinDate: "2024-04-20",
@@ -61,7 +65,8 @@ const members = [
     id: "m_005",
     name: "Arjun Kumar",
     email: "arjun.kumar@example.com",
-    avatar: "https://i.pravatar.cc/150?u=arjun",
+    avatar: "https://picsum.photos/seed/arjun/150/150",
+    hint: "man portrait",
     status: "Inactive",
     plan: "Annually",
     joinDate: "2023-08-05",
@@ -88,7 +93,7 @@ export function MembersTable() {
             <TableCell>
               <div className="flex items-center gap-3">
                 <Avatar>
-                  <AvatarImage src={member.avatar} alt={member.name} />
+                  <AvatarImage src={member.avatar} alt={member.name} data-ai-hint={member.hint} />
                   <AvatarFallback>{member.name.charAt(0)}</AvatarFallback>
                 </Avatar>
                 <div className="font-medium">
