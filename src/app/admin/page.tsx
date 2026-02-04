@@ -1,6 +1,15 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Users, BookCheck, BarChart, CalendarCheck } from "lucide-react";
-import { WeeklyChart } from "@/components/admin/WeeklyChart";
+import dynamic from 'next/dynamic';
+import { Skeleton } from "@/components/ui/skeleton";
+
+const WeeklyChart = dynamic(
+  () => import('@/components/admin/WeeklyChart').then(mod => mod.WeeklyChart),
+  { 
+    ssr: false,
+    loading: () => <Skeleton className="h-[350px] w-full" />
+  }
+);
 
 
 export default function AdminDashboardPage() {
