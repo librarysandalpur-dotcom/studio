@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import {
   Card,
   CardContent,
@@ -18,6 +18,7 @@ import { Armchair, Calendar as CalendarIcon, Clock, CheckCircle, User } from 'lu
 const totalSeats = 30;
 const generateBookedSeats = (date: Date | undefined) => {
     if (!date) return [];
+    // Simple pseudo-random number generator based on date to ensure consistent "booked" seats for a given day.
     const seed = date.getDate() + date.getMonth() * 31 + date.getFullYear() * 365;
     const rng = (s: number) => {
         const x = Math.sin(s) * 10000;
@@ -32,11 +33,22 @@ const generateBookedSeats = (date: Date | undefined) => {
 };
 
 export default function BookingPage() {
-  const [date, setDate] = useState<Date | undefined>(new Date());
+  const [date, setDate] = useState<Date | undefined>();
+  const [bookedSeats, setBookedSeats] = useState<number[]>([]);
   const [selectedSeat, setSelectedSeat] = useState<number | null>(null);
   const { toast } = useToast();
 
-  const bookedSeats = generateBookedSeats(date);
+  useEffect(() => {
+    // Set initial date on the client to avoid hydration mismatch
+    setDate(new Date());
+  }, []);
+
+  useEffect(() => {
+    // Recalculate booked seats and reset selection when date changes
+    setBookedSeats(generateBookedSeats(date));
+    setSelectedSeat(null);
+  }, [date]);
+
 
   const handleSeatClick = (seatNumber: number) => {
     if (bookedSeats.includes(seatNumber)) return;
@@ -58,7 +70,9 @@ export default function BookingPage() {
       description: `Seat ${selectedSeat} booked for ${date.toLocaleDateString()}.`,
     });
     // In a real app, you would update the backend here.
-    // For this demo, we'll just show the toast and clear selection.
+    // For this demo, we'll just show the toast and re-generate booked seats to simulate the change.
+    const newBookedSeats = [...bookedSeats, selectedSeat];
+    setBookedSeats(newBookedSeats);
     setSelectedSeat(null);
   };
 
