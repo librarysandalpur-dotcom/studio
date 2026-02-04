@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Library, Menu, X } from 'lucide-react';
+import { BookOpen, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
@@ -23,7 +23,7 @@ export function Header() {
     <header className="bg-card/80 backdrop-blur-lg sticky top-0 z-50 w-full border-b">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <Library className="h-6 w-6 text-primary" />
+          <BookOpen className="h-6 w-6 text-primary" />
           <span className="text-lg font-bold text-primary">
             Sanskriti Library
           </span>
