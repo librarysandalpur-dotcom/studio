@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { BookOpen, Facebook, Twitter, Instagram } from 'lucide-react';
+import { Library, Facebook, Twitter, Instagram } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container mx-auto grid grid-cols-1 gap-8 px-4 py-12 md:grid-cols-3 md:px-6">
         <div className="flex flex-col items-start gap-4">
           <Link href="/" className="flex items-center gap-2" prefetch={false}>
-            <BookOpen className="h-6 w-6 text-primary" />
+            <Library className="h-6 w-6 text-primary" />
             <span className="text-lg font-bold">Sanskriti Library</span>
           </Link>
           <p className="text-sm text-muted-foreground">

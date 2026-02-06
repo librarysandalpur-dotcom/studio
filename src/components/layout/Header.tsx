@@ -1,29 +1,43 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { BookOpen, Menu, X } from 'lucide-react';
+import { Library, Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
+import { useUser } from '@/firebase';
+import { getAuth, signOut } from 'firebase/auth';
 
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/booking', label: 'Booking' },
   { href: '/faq', label: 'FAQs' },
   { href: '/contact', label: 'Contact' },
-  { href: '/admin', label: 'Admin' },
 ];
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
+  const { user, loading } = useUser();
+
+  const handleLogout = async () => {
+    const auth = getAuth();
+    await signOut(auth);
+  };
+
+  // Close menu on navigation
+  useEffect(() => {
+    if(isMenuOpen) {
+      setIsMenuOpen(false);
+    }
+  }, [pathname]);
 
   return (
     <header className="bg-card/80 backdrop-blur-lg sticky top-0 z-50 w-full border-b">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <Link href="/" className="flex items-center gap-2" prefetch={false}>
-          <BookOpen className="h-6 w-6 text-primary" />
+          <Library className="h-6 w-6 text-primary" />
           <span className="text-lg font-bold text-primary">
             Sanskriti Library
           </span>
@@ -44,6 +58,37 @@ export function Header() {
               {label}
             </Link>
           ))}
+          {!loading &&
+            (user ? (
+              <>
+                <Link
+                  href="/admin"
+                  className={cn(
+                    'text-sm font-medium transition-colors hover:text-primary',
+                    pathname.startsWith('/admin')
+                      ? 'text-primary'
+                      : 'text-muted-foreground'
+                  )}
+                  prefetch={false}
+                >
+                  Admin
+                </Link>
+                <Button variant="ghost" size="sm" onClick={handleLogout}>Logout</Button>
+              </>
+            ) : (
+              <Link
+                href="/login"
+                className={cn(
+                  'text-sm font-medium transition-colors hover:text-primary',
+                  pathname === '/login'
+                    ? 'text-primary'
+                    : 'text-muted-foreground'
+                )}
+                prefetch={false}
+              >
+                Staff Login
+              </Link>
+            ))}
         </nav>
         <div className="md:hidden">
           <Button
@@ -51,25 +96,15 @@ export function Header() {
             size="icon"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            <Menu className="h-6 w-6" />
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </div>
       </div>
       {isMenuOpen && (
-        <div className="md:hidden absolute top-0 left-0 w-full h-screen bg-background/95 z-50">
-          <div className="flex justify-end p-4">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              <X className="h-6 w-6" />
-              <span className="sr-only">Close menu</span>
-            </Button>
-          </div>
-          <nav className="flex flex-col items-center gap-6 mt-8">
-            {navLinks.map(({ href, label }) => (
+        <div className="md:hidden absolute top-16 left-0 w-full bg-background/95 z-40">
+          <nav className="flex flex-col items-center gap-6 py-8">
+            {[...navLinks, ...(user ? [{href: '/admin', label: 'Admin'}] : [{href: '/login', label: 'Staff Login'}])].map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
@@ -83,6 +118,12 @@ export function Header() {
                 {label}
               </Link>
             ))}
+             {user && (
+                <Button variant="ghost" onClick={() => {
+                  handleLogout();
+                  setIsMenuOpen(false);
+                }}>Logout</Button>
+              )}
           </nav>
         </div>
       )}

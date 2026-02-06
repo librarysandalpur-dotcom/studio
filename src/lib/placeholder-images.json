@@ -3,43 +3,43 @@
     {
       "id": "hero-background",
       "description": "A wide-angle view of a modern and quiet library interior, with bookshelves lining the walls and comfortable seating areas.",
-      "imageUrl": "https://images.unsplash.com/photo-1568667256549-094345857637?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxsaWJyYXJ5JTIwaW50ZXJpb3J8ZW58MHx8fHwxNzcwMTM3MTY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1599933959041-19cbf8d470f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsaWJyYXJ5JTIwaW50ZXJpb3J8ZW58MHx8fHwxNzcwMjY5NTM4fDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "library interior"
     },
     {
       "id": "gallery-1",
       "description": "A close-up of a well-lit study desk with a laptop, a notebook, and a cup of coffee.",
-      "imageUrl": "https://images.unsplash.com/photo-1721714933699-1a7650a79754?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdHVkeSUyMGRlc2t8ZW58MHx8fHwxNzcwMTA5MTAxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1617239098289-ad0ee436361e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdHVkeSUyMGRlc2t8ZW58MHx8fHwxNzcwMzU1MTQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "study desk"
     },
     {
       "id": "gallery-2",
       "description": "Students studying together at a large table in the library.",
-      "imageUrl": "https://images.unsplash.com/photo-1721702754494-fdd7189f946c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxzdHVkZW50cyUyMHN0dWR5aW5nfGVufDB8fHx8MTc3MDExNDYzOHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1728455635901-bb16530faf40?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxzdHVkZW50cyUyMHN0dWR5aW5nfGVufDB8fHx8MTc3MDI2ODI0MXww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "students studying"
     },
     {
       "id": "gallery-3",
       "description": "A bookshelf filled with a diverse collection of books.",
-      "imageUrl": "https://images.unsplash.com/photo-1676487093282-f6a47e02848f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxib29rc2hlbGYlMjBib29rc3xlbnwwfHx8fDE3NzAxMzcxNjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1618351895371-16c3cea66aa4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxib29rc2hlbGYlMjBib29rc3xlbnwwfHx8fDE3NzAzNTUxNDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "bookshelf books"
     },
     {
       "id": "gallery-4",
       "description": "A comfortable armchair in a quiet corner of the library, perfect for reading.",
-      "imageUrl": "https://images.unsplash.com/photo-1665109467394-4bb37604e77f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxyZWFkaW5nJTIwY29ybmVyfGVufDB8fHx8MTc3MDEzNzE2N3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1602418514663-a1ee3c1cc626?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxyZWFkaW5nJTIwY29ybmVyfGVufDB8fHx8MTc3MDI4MTM2NHww&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "reading corner"
     },
     {
       "id": "gallery-5",
       "description": "The exterior of the modern library building.",
-      "imageUrl": "https://images.unsplash.com/photo-1608569569843-c31b5be2ef1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxsaWJyYXJ5JTIwZXh0ZXJpb3J8ZW58MHx8fHwxNzcwMTM3MTY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1631911954603-0f677b8bb638?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwzfHxsaWJyYXJ5JTIwZXh0ZXJpb3J8ZW58MHx8fHwxNzcwMzU1MTQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "library exterior"
     },
     {
       "id": "gallery-6",
       "description": "A person using a library computer.",
-      "imageUrl": "https://images.unsplash.com/photo-1563737590014-5d5c37378130?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxsaWJyYXJ5JTIwY29tcHV0ZXJ8ZW58MHx8fHwxNzcwMTM3MTY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageUrl": "https://images.unsplash.com/photo-1653055274479-225eff1cc16b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxsaWJyYXJ5JTIwY29tcHV0ZXJ8ZW58MHx8fHwxNzcwMzU1MTQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "library computer"
     }
   ]

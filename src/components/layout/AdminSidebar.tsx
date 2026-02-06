@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
-  BookOpen,
+  Library,
   LayoutDashboard,
   Users,
   Image,
@@ -28,7 +28,7 @@ function NavContent() {
         <>
             <div className="flex h-16 items-center border-b px-6">
                 <Link href="/admin" className="flex items-center gap-2 font-semibold">
-                <BookOpen className="h-6 w-6 text-primary" />
+                <Library className="h-6 w-6 text-primary" />
                 <span>Admin Panel</span>
                 </Link>
             </div>
@@ -75,7 +75,7 @@ export function AdminSidebar() {
           </SheetContent>
         </Sheet>
          <Link href="/admin" className="flex items-center gap-2 font-semibold text-lg">
-            <BookOpen className="h-6 w-6 text-primary" />
+            <Library className="h-6 w-6 text-primary" />
             <span>Admin</span>
         </Link>
       </header>
